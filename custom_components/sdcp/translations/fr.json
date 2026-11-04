@@ -1,0 +1,280 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Ajouter une imprimante SDCP",
+        "description": "Imprimantes trouvées sur le réseau : {found}. Choisissez-en une ou saisissez l'adresse IP.",
+        "data": {
+          "host": "Adresse IP de l'imprimante"
+        },
+        "data_description": {
+          "host": "IP ou nom d'hôte de l'imprimante. Elle doit être sur le même réseau ; SDCP utilise les ports 3000/udp et 3030/tcp."
+        }
+      },
+      "reconfigure": {
+        "title": "Modifier l'adresse de l'imprimante",
+        "data": {
+          "host": "Adresse IP de l'imprimante"
+        },
+        "data_description": {
+          "host": "IP ou nom d'hôte de l'imprimante. Elle doit être sur le même réseau ; SDCP utilise les ports 3000/udp et 3030/tcp."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de se connecter à l'imprimante (WebSocket sur le port 3030).",
+      "unknown": "Erreur inattendue.",
+      "no_id": "L'imprimante n'a pas indiqué son MainboardID."
+    },
+    "abort": {
+      "already_configured": "Cette imprimante est déjà configurée.",
+      "reconfigure_successful": "L'adresse a été mise à jour.",
+      "wrong_printer": "Cette adresse correspond à une autre imprimante."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Interrogation",
+        "data": {
+          "poll_active": "Intervalle d'état pendant l'impression",
+          "poll_idle": "Intervalle d'état au repos"
+        },
+        "data_description": {
+          "poll_active": "L'imprimante envoie son état sur demande ; plus court = progression plus vivante."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "machine_status": {
+        "name": "État de la machine",
+        "state": {
+          "idle": "Au repos",
+          "printing": "Impression",
+          "file_transferring": "Réception du fichier",
+          "exposure_testing": "Test d'exposition",
+          "devices_testing": "Autotest",
+          "unknown": "Inconnu"
+        }
+      },
+      "print_status": {
+        "name": "Étape d'impression",
+        "state": {
+          "idle": "Au repos",
+          "homing": "Mise à l'origine",
+          "dropping": "Descente",
+          "exposing": "Exposition",
+          "lifting": "Levée",
+          "pausing": "Mise en pause",
+          "paused": "En pause",
+          "stopping": "Arrêt en cours",
+          "stopped": "Arrêtée",
+          "complete": "Terminée",
+          "file_checking": "Vérification du fichier",
+          "resuming": "Reprise",
+          "printing": "Impression",
+          "heating": "Chauffe",
+          "leveling": "Calibrage",
+          "unknown": "Inconnu"
+        }
+      },
+      "progress": {
+        "name": "Progression"
+      },
+      "current_layer": {
+        "name": "Couche actuelle"
+      },
+      "total_layers": {
+        "name": "Nombre de couches"
+      },
+      "print_elapsed": {
+        "name": "Écoulé"
+      },
+      "print_remaining": {
+        "name": "Restant"
+      },
+      "print_finish": {
+        "name": "Heure de fin"
+      },
+      "filename": {
+        "name": "Fichier"
+      },
+      "print_error": {
+        "name": "Erreur d'impression",
+        "state": {
+          "none": "Aucune",
+          "md5_check": "Somme de contrôle du fichier",
+          "file_not_found": "Fichier introuvable",
+          "file_read": "Erreur de lecture du fichier",
+          "resolution_mismatch": "Résolution incompatible",
+          "unknown_format": "Format inconnu",
+          "wrong_model": "Tranché pour un autre modèle",
+          "unknown": "Inconnu"
+        }
+      },
+      "uv_led_temp": {
+        "name": "Température des LED UV"
+      },
+      "vat_temp": {
+        "name": "Température du bac"
+      },
+      "vat_target_temp": {
+        "name": "Température cible du bac"
+      },
+      "release_film": {
+        "name": "Cycles du film FEP"
+      },
+      "release_film_wear": {
+        "name": "Usure du film FEP"
+      },
+      "lcd_usage": {
+        "name": "Durée d'utilisation du LCD"
+      },
+      "nozzle_temp": {
+        "name": "Température de la buse"
+      },
+      "nozzle_target_temp": {
+        "name": "Température cible de la buse"
+      },
+      "bed_temp": {
+        "name": "Température du plateau"
+      },
+      "bed_target_temp": {
+        "name": "Température cible du plateau"
+      },
+      "chamber_temp": {
+        "name": "Température de l'enceinte"
+      },
+      "model_fan": {
+        "name": "Ventilateur de pièce"
+      },
+      "aux_fan": {
+        "name": "Ventilateur auxiliaire"
+      },
+      "box_fan": {
+        "name": "Ventilateur de l'enceinte"
+      },
+      "print_speed": {
+        "name": "Vitesse d'impression"
+      },
+      "z_offset": {
+        "name": "Décalage Z"
+      },
+      "free_storage": {
+        "name": "Stockage libre"
+      },
+      "video_streams": {
+        "name": "Flux vidéo"
+      },
+      "toolhead_position": {
+        "name": "Position de la tête"
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Connexion"
+      },
+      "printing": {
+        "name": "Impression"
+      },
+      "vat_heating": {
+        "name": "Chauffage du bac"
+      },
+      "usb_disk": {
+        "name": "Clé USB"
+      },
+      "health_uv_sensor": {
+        "name": "Capteur de température UV"
+      },
+      "health_tank": {
+        "name": "Bac"
+      },
+      "health_lcd": {
+        "name": "LCD"
+      },
+      "health_strain_gauge": {
+        "name": "Capteur de force"
+      },
+      "health_z_motor": {
+        "name": "Moteur Z"
+      },
+      "health_tilt_motor": {
+        "name": "Moteur d'inclinaison"
+      },
+      "health_release_film": {
+        "name": "Film FEP"
+      },
+      "health_x_motor": {
+        "name": "Moteur X"
+      },
+      "health_y_motor": {
+        "name": "Moteur Y"
+      }
+    },
+    "button": {
+      "pause": {
+        "name": "Pause"
+      },
+      "resume": {
+        "name": "Reprendre"
+      },
+      "stop": {
+        "name": "Arrêter"
+      },
+      "refresh": {
+        "name": "Actualiser"
+      }
+    },
+    "switch": {
+      "timelapse": {
+        "name": "Time-lapse"
+      }
+    },
+    "camera": {
+      "camera": {
+        "name": "Caméra"
+      }
+    },
+    "image": {
+      "thumbnail": {
+        "name": "Aperçu du modèle"
+      }
+    }
+  },
+  "services": {
+    "start_print": {
+      "name": "Lancer l'impression",
+      "description": "Lance l'impression d'un fichier stocké sur l'imprimante.",
+      "fields": {
+        "device_id": {
+          "name": "Imprimante",
+          "description": "Imprimante"
+        },
+        "filename": {
+          "name": "Nom du fichier",
+          "description": "Nom du fichier sur l'imprimante (préfixe de chemin facultatif)."
+        },
+        "start_layer": {
+          "name": "Couche de départ",
+          "description": "Couche à partir de laquelle commencer (0 = début)."
+        }
+      }
+    },
+    "delete_files": {
+      "name": "Supprimer des fichiers",
+      "description": "Supprime des fichiers de la mémoire de l'imprimante.",
+      "fields": {
+        "device_id": {
+          "name": "Imprimante",
+          "description": "Imprimante"
+        },
+        "files": {
+          "name": "Fichiers",
+          "description": "Liste des chemins complets des fichiers."
+        }
+      }
+    }
+  }
+}

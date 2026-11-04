@@ -1,0 +1,51 @@
+{
+  "_source": "SYNTHETIC — an unknown resin printer: must fall back to the generic resin model.",
+  "attributes": {
+    "Name": "Mars",
+    "MachineName": "Mars 5 Ultra",
+    "BrandName": "ELEGOO",
+    "ProtocolVersion": "V3.0.0",
+    "FirmwareVersion": "V1.0.0",
+    "MainboardIP": "127.0.0.1",
+    "MainboardID": "aa0000000000000002",
+    "Capabilities": [
+      "FILE_TRANSFER",
+      "PRINT_CONTROL"
+    ],
+    "DevicesStatus": {
+      "ZMotorStatus": 1
+    },
+    "CameraStatus": 0
+  },
+  "status": {
+    "CurrentStatus": [
+      0
+    ],
+    "TempOfUVLED": 28.1,
+    "PrintInfo": {
+      "Status": 0,
+      "CurrentLayer": 0,
+      "TotalLayer": 0,
+      "CurrentTicks": 0,
+      "TotalTicks": 0,
+      "ErrorNumber": 0,
+      "Filename": "",
+      "TaskId": ""
+    }
+  },
+  "expect": {
+    "model": "generic-resin",
+    "profile": "generic-resin",
+    "kind": "resin",
+    "print_status": "idle",
+    "remaining_min": 0,
+    "sensors": [
+      "uv_led_temp"
+    ],
+    "absent": [
+      "vat_temp",
+      "nozzle_temp"
+    ],
+    "camera": false
+  }
+}

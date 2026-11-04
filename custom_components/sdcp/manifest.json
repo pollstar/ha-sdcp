@@ -1,0 +1,15 @@
+{
+  "domain": "sdcp",
+  "name": "SDCP 3D Printer",
+  "after_dependencies": ["ffmpeg", "stream", "lovelace"],
+  "codeowners": ["@pollstar"],
+  "config_flow": true,
+  "dependencies": ["http", "websocket_api"],
+  "documentation": "https://github.com/pollstar/ha-sdcp",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/pollstar/ha-sdcp/issues",
+  "loggers": ["custom_components.sdcp"],
+  "requirements": [],
+  "version": "0.3.0"
+}

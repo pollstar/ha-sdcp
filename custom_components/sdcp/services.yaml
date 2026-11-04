@@ -1,0 +1,32 @@
+start_print:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: sdcp
+    filename:
+      required: true
+      example: "model.ctb"
+      selector:
+        text:
+    start_layer:
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 100000
+          mode: box
+
+delete_files:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: sdcp
+    files:
+      required: true
+      example: '["/local/old.ctb"]'
+      selector:
+        object:

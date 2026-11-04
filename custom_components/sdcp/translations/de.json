@@ -1,0 +1,280 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SDCP-Drucker hinzufügen",
+        "description": "Im Netzwerk gefundene Drucker: {found}. Wählen Sie einen aus oder geben Sie die IP-Adresse ein.",
+        "data": {
+          "host": "IP-Adresse des Druckers"
+        },
+        "data_description": {
+          "host": "IP oder Hostname des Druckers. Er muss im selben Netzwerk sein; SDCP nutzt die Ports 3000/udp und 3030/tcp."
+        }
+      },
+      "reconfigure": {
+        "title": "Druckeradresse ändern",
+        "data": {
+          "host": "IP-Adresse des Druckers"
+        },
+        "data_description": {
+          "host": "IP oder Hostname des Druckers. Er muss im selben Netzwerk sein; SDCP nutzt die Ports 3000/udp und 3030/tcp."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Keine Verbindung zum Drucker (WebSocket auf Port 3030).",
+      "unknown": "Unerwarteter Fehler.",
+      "no_id": "Der Drucker hat keine MainboardID gemeldet."
+    },
+    "abort": {
+      "already_configured": "Dieser Drucker ist bereits eingerichtet.",
+      "reconfigure_successful": "Die Adresse wurde aktualisiert.",
+      "wrong_printer": "Diese Adresse gehört zu einem anderen Drucker."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Abfrage",
+        "data": {
+          "poll_active": "Statusintervall beim Drucken",
+          "poll_idle": "Statusintervall im Leerlauf"
+        },
+        "data_description": {
+          "poll_active": "Der Drucker sendet den Status auf Anfrage; kürzer bedeutet flüssigeren Fortschritt."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "machine_status": {
+        "name": "Gerätezustand",
+        "state": {
+          "idle": "Leerlauf",
+          "printing": "Druckt",
+          "file_transferring": "Datei wird empfangen",
+          "exposure_testing": "Belichtungstest",
+          "devices_testing": "Selbsttest",
+          "unknown": "Unbekannt"
+        }
+      },
+      "print_status": {
+        "name": "Druckphase",
+        "state": {
+          "idle": "Leerlauf",
+          "homing": "Referenzfahrt",
+          "dropping": "Absenken",
+          "exposing": "Belichtung",
+          "lifting": "Anheben",
+          "pausing": "Wird pausiert",
+          "paused": "Pausiert",
+          "stopping": "Wird gestoppt",
+          "stopped": "Gestoppt",
+          "complete": "Fertig",
+          "file_checking": "Datei wird geprüft",
+          "resuming": "Wird fortgesetzt",
+          "printing": "Druckt",
+          "heating": "Aufheizen",
+          "leveling": "Nivellierung",
+          "unknown": "Unbekannt"
+        }
+      },
+      "progress": {
+        "name": "Fortschritt"
+      },
+      "current_layer": {
+        "name": "Aktuelle Schicht"
+      },
+      "total_layers": {
+        "name": "Schichten gesamt"
+      },
+      "print_elapsed": {
+        "name": "Vergangen"
+      },
+      "print_remaining": {
+        "name": "Verbleibend"
+      },
+      "print_finish": {
+        "name": "Fertig um"
+      },
+      "filename": {
+        "name": "Datei"
+      },
+      "print_error": {
+        "name": "Druckfehler",
+        "state": {
+          "none": "Keiner",
+          "md5_check": "Prüfsumme der Datei",
+          "file_not_found": "Datei nicht gefunden",
+          "file_read": "Fehler beim Lesen der Datei",
+          "resolution_mismatch": "Auflösung passt nicht",
+          "unknown_format": "Unbekanntes Format",
+          "wrong_model": "Für ein anderes Modell geslict",
+          "unknown": "Unbekannt"
+        }
+      },
+      "uv_led_temp": {
+        "name": "UV-LED-Temperatur"
+      },
+      "vat_temp": {
+        "name": "Wannentemperatur"
+      },
+      "vat_target_temp": {
+        "name": "Wannen-Solltemperatur"
+      },
+      "release_film": {
+        "name": "Zyklen der Trennfolie"
+      },
+      "release_film_wear": {
+        "name": "Verschleiß der Trennfolie"
+      },
+      "lcd_usage": {
+        "name": "LCD-Betriebszeit"
+      },
+      "nozzle_temp": {
+        "name": "Düsentemperatur"
+      },
+      "nozzle_target_temp": {
+        "name": "Düsen-Solltemperatur"
+      },
+      "bed_temp": {
+        "name": "Betttemperatur"
+      },
+      "bed_target_temp": {
+        "name": "Bett-Solltemperatur"
+      },
+      "chamber_temp": {
+        "name": "Kammertemperatur"
+      },
+      "model_fan": {
+        "name": "Bauteillüfter"
+      },
+      "aux_fan": {
+        "name": "Zusatzlüfter"
+      },
+      "box_fan": {
+        "name": "Kammerlüfter"
+      },
+      "print_speed": {
+        "name": "Druckgeschwindigkeit"
+      },
+      "z_offset": {
+        "name": "Z-Versatz"
+      },
+      "free_storage": {
+        "name": "Freier Speicher"
+      },
+      "video_streams": {
+        "name": "Videostreams"
+      },
+      "toolhead_position": {
+        "name": "Druckkopfposition"
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Verbindung"
+      },
+      "printing": {
+        "name": "Druckt"
+      },
+      "vat_heating": {
+        "name": "Wannenheizung"
+      },
+      "usb_disk": {
+        "name": "USB-Stick"
+      },
+      "health_uv_sensor": {
+        "name": "UV-Temperatursensor"
+      },
+      "health_tank": {
+        "name": "Wanne"
+      },
+      "health_lcd": {
+        "name": "LCD"
+      },
+      "health_strain_gauge": {
+        "name": "Kraftsensor"
+      },
+      "health_z_motor": {
+        "name": "Z-Motor"
+      },
+      "health_tilt_motor": {
+        "name": "Kippmotor"
+      },
+      "health_release_film": {
+        "name": "Trennfolie"
+      },
+      "health_x_motor": {
+        "name": "X-Motor"
+      },
+      "health_y_motor": {
+        "name": "Y-Motor"
+      }
+    },
+    "button": {
+      "pause": {
+        "name": "Pause"
+      },
+      "resume": {
+        "name": "Fortsetzen"
+      },
+      "stop": {
+        "name": "Stopp"
+      },
+      "refresh": {
+        "name": "Aktualisieren"
+      }
+    },
+    "switch": {
+      "timelapse": {
+        "name": "Zeitraffer"
+      }
+    },
+    "camera": {
+      "camera": {
+        "name": "Kamera"
+      }
+    },
+    "image": {
+      "thumbnail": {
+        "name": "Modellvorschau"
+      }
+    }
+  },
+  "services": {
+    "start_print": {
+      "name": "Druck starten",
+      "description": "Startet den Druck einer auf dem Drucker gespeicherten Datei.",
+      "fields": {
+        "device_id": {
+          "name": "Drucker",
+          "description": "Drucker"
+        },
+        "filename": {
+          "name": "Dateiname",
+          "description": "Dateiname auf dem Drucker (Pfadpräfix optional)."
+        },
+        "start_layer": {
+          "name": "Startschicht",
+          "description": "Schicht, ab der gedruckt wird (0 = Anfang)."
+        }
+      }
+    },
+    "delete_files": {
+      "name": "Dateien löschen",
+      "description": "Löscht Dateien aus dem Druckerspeicher.",
+      "fields": {
+        "device_id": {
+          "name": "Drucker",
+          "description": "Drucker"
+        },
+        "files": {
+          "name": "Dateien",
+          "description": "Liste vollständiger Dateipfade."
+        }
+      }
+    }
+  }
+}

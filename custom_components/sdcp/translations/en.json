@@ -1,0 +1,280 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add an SDCP printer",
+        "description": "Printers found on the network: {found}. Pick one or type the IP address.",
+        "data": {
+          "host": "Printer IP address"
+        },
+        "data_description": {
+          "host": "Printer IP or host name. The printer must be on the same network; SDCP uses ports 3000/udp and 3030/tcp."
+        }
+      },
+      "reconfigure": {
+        "title": "Change printer address",
+        "data": {
+          "host": "Printer IP address"
+        },
+        "data_description": {
+          "host": "Printer IP or host name. The printer must be on the same network; SDCP uses ports 3000/udp and 3030/tcp."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the printer (WebSocket on port 3030).",
+      "unknown": "Unexpected error.",
+      "no_id": "The printer did not report its MainboardID."
+    },
+    "abort": {
+      "already_configured": "This printer is already configured.",
+      "reconfigure_successful": "The address was updated.",
+      "wrong_printer": "This address belongs to a different printer."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling",
+        "data": {
+          "poll_active": "Status interval while printing",
+          "poll_idle": "Status interval when idle"
+        },
+        "data_description": {
+          "poll_active": "The printer pushes status on request; shorter means livelier progress."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "machine_status": {
+        "name": "Machine state",
+        "state": {
+          "idle": "Idle",
+          "printing": "Printing",
+          "file_transferring": "Receiving file",
+          "exposure_testing": "Exposure test",
+          "devices_testing": "Self-test",
+          "unknown": "Unknown"
+        }
+      },
+      "print_status": {
+        "name": "Print stage",
+        "state": {
+          "idle": "Idle",
+          "homing": "Homing",
+          "dropping": "Lowering",
+          "exposing": "Exposing",
+          "lifting": "Lifting",
+          "pausing": "Pausing",
+          "paused": "Paused",
+          "stopping": "Stopping",
+          "stopped": "Stopped",
+          "complete": "Complete",
+          "file_checking": "Checking file",
+          "resuming": "Resuming",
+          "printing": "Printing",
+          "heating": "Heating",
+          "leveling": "Leveling",
+          "unknown": "Unknown"
+        }
+      },
+      "progress": {
+        "name": "Progress"
+      },
+      "current_layer": {
+        "name": "Current layer"
+      },
+      "total_layers": {
+        "name": "Total layers"
+      },
+      "print_elapsed": {
+        "name": "Elapsed"
+      },
+      "print_remaining": {
+        "name": "Remaining"
+      },
+      "print_finish": {
+        "name": "Finish time"
+      },
+      "filename": {
+        "name": "File"
+      },
+      "print_error": {
+        "name": "Print error",
+        "state": {
+          "none": "None",
+          "md5_check": "File checksum",
+          "file_not_found": "File not found",
+          "file_read": "File read error",
+          "resolution_mismatch": "Resolution mismatch",
+          "unknown_format": "Unknown format",
+          "wrong_model": "Sliced for another model",
+          "unknown": "Unknown"
+        }
+      },
+      "uv_led_temp": {
+        "name": "UV LED temperature"
+      },
+      "vat_temp": {
+        "name": "Vat temperature"
+      },
+      "vat_target_temp": {
+        "name": "Vat target temperature"
+      },
+      "release_film": {
+        "name": "Release film cycles"
+      },
+      "release_film_wear": {
+        "name": "Release film wear"
+      },
+      "lcd_usage": {
+        "name": "LCD exposure time"
+      },
+      "nozzle_temp": {
+        "name": "Nozzle temperature"
+      },
+      "nozzle_target_temp": {
+        "name": "Nozzle target temperature"
+      },
+      "bed_temp": {
+        "name": "Bed temperature"
+      },
+      "bed_target_temp": {
+        "name": "Bed target temperature"
+      },
+      "chamber_temp": {
+        "name": "Chamber temperature"
+      },
+      "model_fan": {
+        "name": "Model fan"
+      },
+      "aux_fan": {
+        "name": "Auxiliary fan"
+      },
+      "box_fan": {
+        "name": "Chamber fan"
+      },
+      "print_speed": {
+        "name": "Print speed"
+      },
+      "z_offset": {
+        "name": "Z offset"
+      },
+      "free_storage": {
+        "name": "Free storage"
+      },
+      "video_streams": {
+        "name": "Video streams"
+      },
+      "toolhead_position": {
+        "name": "Toolhead position"
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Connection"
+      },
+      "printing": {
+        "name": "Printing"
+      },
+      "vat_heating": {
+        "name": "Vat heating"
+      },
+      "usb_disk": {
+        "name": "USB drive"
+      },
+      "health_uv_sensor": {
+        "name": "UV temperature sensor"
+      },
+      "health_tank": {
+        "name": "Vat"
+      },
+      "health_lcd": {
+        "name": "LCD"
+      },
+      "health_strain_gauge": {
+        "name": "Strain gauge"
+      },
+      "health_z_motor": {
+        "name": "Z motor"
+      },
+      "health_tilt_motor": {
+        "name": "Tilt motor"
+      },
+      "health_release_film": {
+        "name": "Release film"
+      },
+      "health_x_motor": {
+        "name": "X motor"
+      },
+      "health_y_motor": {
+        "name": "Y motor"
+      }
+    },
+    "button": {
+      "pause": {
+        "name": "Pause"
+      },
+      "resume": {
+        "name": "Resume"
+      },
+      "stop": {
+        "name": "Stop"
+      },
+      "refresh": {
+        "name": "Refresh"
+      }
+    },
+    "switch": {
+      "timelapse": {
+        "name": "Time-lapse"
+      }
+    },
+    "camera": {
+      "camera": {
+        "name": "Camera"
+      }
+    },
+    "image": {
+      "thumbnail": {
+        "name": "Model preview"
+      }
+    }
+  },
+  "services": {
+    "start_print": {
+      "name": "Start print",
+      "description": "Start printing a file stored on the printer.",
+      "fields": {
+        "device_id": {
+          "name": "Printer",
+          "description": "Printer"
+        },
+        "filename": {
+          "name": "File name",
+          "description": "File name on the printer (path prefix is optional)."
+        },
+        "start_layer": {
+          "name": "Start layer",
+          "description": "Layer to start from (0 = beginning)."
+        }
+      }
+    },
+    "delete_files": {
+      "name": "Delete files",
+      "description": "Delete files from the printer storage.",
+      "fields": {
+        "device_id": {
+          "name": "Printer",
+          "description": "Printer"
+        },
+        "files": {
+          "name": "Files",
+          "description": "List of full file paths."
+        }
+      }
+    }
+  }
+}

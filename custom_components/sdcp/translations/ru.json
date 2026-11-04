@@ -1,0 +1,280 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Добавить SDCP-принтер",
+        "description": "Найдено принтеров в сети: {found}. Выберите или введите IP-адрес.",
+        "data": {
+          "host": "IP-адрес принтера"
+        },
+        "data_description": {
+          "host": "IP или имя хоста. Принтер должен быть в той же сети; SDCP использует порты 3000/udp и 3030/tcp."
+        }
+      },
+      "reconfigure": {
+        "title": "Изменить адрес принтера",
+        "data": {
+          "host": "IP-адрес принтера"
+        },
+        "data_description": {
+          "host": "IP или имя хоста. Принтер должен быть в той же сети; SDCP использует порты 3000/udp и 3030/tcp."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Нет связи с принтером (WebSocket на порту 3030).",
+      "unknown": "Непредвиденная ошибка.",
+      "no_id": "Принтер не сообщил MainboardID."
+    },
+    "abort": {
+      "already_configured": "Этот принтер уже добавлен.",
+      "reconfigure_successful": "Адрес обновлён.",
+      "wrong_printer": "По этому адресу другой принтер."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Опрос",
+        "data": {
+          "poll_active": "Интервал опроса во время печати",
+          "poll_idle": "Интервал опроса в простое"
+        },
+        "data_description": {
+          "poll_active": "Принтер отдаёт статус по запросу; чем меньше, тем живее прогресс."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "machine_status": {
+        "name": "Состояние",
+        "state": {
+          "idle": "Простой",
+          "printing": "Печать",
+          "file_transferring": "Приём файла",
+          "exposure_testing": "Тест засветки",
+          "devices_testing": "Самопроверка",
+          "unknown": "Неизвестно"
+        }
+      },
+      "print_status": {
+        "name": "Стадия печати",
+        "state": {
+          "idle": "Простой",
+          "homing": "Парковка",
+          "dropping": "Опускание",
+          "exposing": "Засветка",
+          "lifting": "Подъём",
+          "pausing": "Приостановка",
+          "paused": "Пауза",
+          "stopping": "Остановка",
+          "stopped": "Остановлено",
+          "complete": "Завершено",
+          "file_checking": "Проверка файла",
+          "resuming": "Возобновление",
+          "printing": "Печать",
+          "heating": "Нагрев",
+          "leveling": "Калибровка",
+          "unknown": "Неизвестно"
+        }
+      },
+      "progress": {
+        "name": "Прогресс"
+      },
+      "current_layer": {
+        "name": "Текущий слой"
+      },
+      "total_layers": {
+        "name": "Всего слоёв"
+      },
+      "print_elapsed": {
+        "name": "Прошло"
+      },
+      "print_remaining": {
+        "name": "Осталось"
+      },
+      "print_finish": {
+        "name": "Время окончания"
+      },
+      "filename": {
+        "name": "Файл"
+      },
+      "print_error": {
+        "name": "Ошибка печати",
+        "state": {
+          "none": "Нет",
+          "md5_check": "Контрольная сумма файла",
+          "file_not_found": "Файл не найден",
+          "file_read": "Ошибка чтения файла",
+          "resolution_mismatch": "Разрешение не совпадает",
+          "unknown_format": "Неизвестный формат",
+          "wrong_model": "Нарезан для другой модели",
+          "unknown": "Неизвестно"
+        }
+      },
+      "uv_led_temp": {
+        "name": "Температура UV-LED"
+      },
+      "vat_temp": {
+        "name": "Температура ванны"
+      },
+      "vat_target_temp": {
+        "name": "Целевая температура ванны"
+      },
+      "release_film": {
+        "name": "Ресурс плёнки"
+      },
+      "release_film_wear": {
+        "name": "Износ плёнки"
+      },
+      "lcd_usage": {
+        "name": "Наработка LCD"
+      },
+      "nozzle_temp": {
+        "name": "Температура сопла"
+      },
+      "nozzle_target_temp": {
+        "name": "Целевая температура сопла"
+      },
+      "bed_temp": {
+        "name": "Температура стола"
+      },
+      "bed_target_temp": {
+        "name": "Целевая температура стола"
+      },
+      "chamber_temp": {
+        "name": "Температура камеры"
+      },
+      "model_fan": {
+        "name": "Обдув модели"
+      },
+      "aux_fan": {
+        "name": "Боковой вентилятор"
+      },
+      "box_fan": {
+        "name": "Вентилятор камеры"
+      },
+      "print_speed": {
+        "name": "Скорость печати"
+      },
+      "z_offset": {
+        "name": "Смещение Z"
+      },
+      "free_storage": {
+        "name": "Свободно в памяти"
+      },
+      "video_streams": {
+        "name": "Видеопотоки"
+      },
+      "toolhead_position": {
+        "name": "Положение головы"
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Связь"
+      },
+      "printing": {
+        "name": "Печать"
+      },
+      "vat_heating": {
+        "name": "Подогрев ванны"
+      },
+      "usb_disk": {
+        "name": "USB-накопитель"
+      },
+      "health_uv_sensor": {
+        "name": "Датчик температуры UV"
+      },
+      "health_tank": {
+        "name": "Ванна"
+      },
+      "health_lcd": {
+        "name": "LCD"
+      },
+      "health_strain_gauge": {
+        "name": "Тензодатчик"
+      },
+      "health_z_motor": {
+        "name": "Мотор Z"
+      },
+      "health_tilt_motor": {
+        "name": "Мотор наклона"
+      },
+      "health_release_film": {
+        "name": "Плёнка"
+      },
+      "health_x_motor": {
+        "name": "Мотор X"
+      },
+      "health_y_motor": {
+        "name": "Мотор Y"
+      }
+    },
+    "button": {
+      "pause": {
+        "name": "Пауза"
+      },
+      "resume": {
+        "name": "Продолжить"
+      },
+      "stop": {
+        "name": "Стоп"
+      },
+      "refresh": {
+        "name": "Обновить"
+      }
+    },
+    "switch": {
+      "timelapse": {
+        "name": "Таймлапс"
+      }
+    },
+    "camera": {
+      "camera": {
+        "name": "Камера"
+      }
+    },
+    "image": {
+      "thumbnail": {
+        "name": "Превью модели"
+      }
+    }
+  },
+  "services": {
+    "start_print": {
+      "name": "Запустить печать",
+      "description": "Запустить печать файла, лежащего на принтере.",
+      "fields": {
+        "device_id": {
+          "name": "Принтер",
+          "description": "Принтер"
+        },
+        "filename": {
+          "name": "Имя файла",
+          "description": "Имя файла на принтере (префикс пути не обязателен)."
+        },
+        "start_layer": {
+          "name": "Начальный слой",
+          "description": "С какого слоя начать (0 — с начала)."
+        }
+      }
+    },
+    "delete_files": {
+      "name": "Удалить файлы",
+      "description": "Удалить файлы из памяти принтера.",
+      "fields": {
+        "device_id": {
+          "name": "Принтер",
+          "description": "Принтер"
+        },
+        "files": {
+          "name": "Файлы",
+          "description": "Список полных путей файлов."
+        }
+      }
+    }
+  }
+}

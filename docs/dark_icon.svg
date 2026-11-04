@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a515d"/><stop offset="1" stop-color="#2c3139"/></linearGradient>
+    <linearGradient id="m" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e79a1f"/><stop offset=".5" stop-color="#ffd27a"/><stop offset="1" stop-color="#c47812"/></linearGradient>
+    <linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2b33d" stop-opacity=".55"/><stop offset="1" stop-color="#f2b33d" stop-opacity=".95"/></linearGradient>
+    <linearGradient id="p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef1f5"/><stop offset="1" stop-color="#9aa2ad"/></linearGradient>
+    <radialGradient id="uv"><stop offset="0" stop-color="#b48cff" stop-opacity=".95"/><stop offset="1" stop-color="#7b4dff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a515d"/><stop offset="1" stop-color="#2c3139"/></linearGradient>
+  </defs>
+  <!-- column -->
+  <rect x="182" y="40" width="14" height="132" rx="3" fill="#8a929f"/>
+  <!-- uv glow -->
+  <ellipse cx="124" cy="170" rx="80" ry="16" fill="url(#uv)"/>
+  <!-- vat -->
+  <path d="M58 138 H190 L185 168 H63 Z" fill="rgba(170,180,195,.12)" stroke="#aab3c2" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M61 150 H187 L185 166 H63 Z" fill="url(#r)"/>
+  <!-- plate, arm, model hanging under the plate -->
+  <rect x="120" y="66" width="74" height="9" rx="3" fill="#8a929f"/>
+  <rect x="70" y="74" width="104" height="10" rx="3" fill="url(#p)"/>
+  <g stroke="#c47812" stroke-width="2.5"><line x1="98" y1="84" x2="98" y2="92"/><line x1="112" y1="84" x2="112" y2="92"/><line x1="126" y1="84" x2="126" y2="92"/><line x1="140" y1="84" x2="140" y2="92"/><line x1="154" y1="84" x2="154" y2="92"/></g>
+  <path d="M90 92 H162 L157 140 Q126 148 95 140 Z" fill="url(#m)"/>
+  <!-- smoked flip-up lid with hatching -->
+  <rect x="46" y="22" width="164" height="150" rx="18" fill="rgba(150,160,180,.16)" stroke="#aab3c2" stroke-width="5"/>
+  <path d="M46 40 a18 18 0 0 1 18 -18 h128 a18 18 0 0 1 18 18 v4 h-164 Z" fill="url(#cap)"/>
+  <g stroke="rgba(255,255,255,.85)" stroke-width="5" stroke-linecap="round"><path d="M160 60 l10 -13"/><path d="M171 60 l10 -13"/><path d="M182 60 l10 -13"/></g>
+  <!-- base with the vertical touchscreen -->
+  <rect x="30" y="170" width="196" height="64" rx="14" fill="url(#b)"/>
+  <rect x="30" y="170" width="196" height="64" rx="14" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="2"/>
+  <rect x="48" y="190" width="104" height="6" rx="3" fill="#6ea0ff"/>
+  <g fill="#0b0c0f"><rect x="48" y="210" width="20" height="5" rx="2.5"/><rect x="76" y="210" width="20" height="5" rx="2.5"/><rect x="104" y="210" width="20" height="5" rx="2.5"/><rect x="132" y="210" width="20" height="5" rx="2.5"/></g>
+  <rect x="168" y="180" width="42" height="46" rx="7" fill="#06070a" stroke="#5d646f" stroke-width="2"/>
+  <circle cx="189" cy="203" r="12" fill="none" stroke="#232a38" stroke-width="4"/>
+  <circle cx="189" cy="203" r="12" fill="none" stroke="#6ea0ff" stroke-width="4" stroke-linecap="round" stroke-dasharray="48 76" transform="rotate(-90 189 203)"/>
+</svg>

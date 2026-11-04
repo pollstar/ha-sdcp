@@ -1,0 +1,86 @@
+{
+  "_source": "Live frames of an ELEGOO Saturn 4 Ultra 16K, firmware V1.2.3 (Cmd 0 / Cmd 1), IP replaced.",
+  "attributes": {
+    "Name": "SATURN",
+    "MachineName": "Saturn 4 Ultra 16K",
+    "BrandName": "ELEGOO",
+    "ProtocolVersion": "V3.0.0",
+    "FirmwareVersion": "V1.2.3",
+    "Resolution": "15120x6230",
+    "XYZsize": "218.88x128.88x220",
+    "MainboardIP": "127.0.0.1",
+    "MainboardID": "c439447916520100",
+    "SDCPStatus": 0,
+    "MaximumCloudSDCPSercicesAllowed": 0,
+    "NumberOfCloudSDCPServicesConnected": 0,
+    "NumberOfVideoStreamConnected": 0,
+    "MaximumVideoStreamAllowed": 2,
+    "NetworkStatus": "",
+    "UsbDiskStatus": 0,
+    "Capabilities": [
+      "FILE_TRANSFER",
+      "PRINT_CONTROL",
+      "VIDEO_STREAM"
+    ],
+    "SupportFileType": [
+      "CTB",
+      "GOO"
+    ],
+    "DevicesStatus": {
+      "TempSensorStatusOfUVLED": 1,
+      "TankStatus": 1,
+      "LCDStatus": 1,
+      "SgStatus": 1,
+      "ZMotorStatus": 1,
+      "RotateMotorStatus": 1,
+      "RelaseFilmState": 1
+    },
+    "ReleaseFilmMax": 60000,
+    "CameraStatus": 1,
+    "RemainingMemory": 3154509824,
+    "TLPNoCapPos": 50,
+    "TLPStartCapPos": 30,
+    "TLPInterLayers": 10
+  },
+  "status": {
+    "CurrentStatus": [
+      1
+    ],
+    "PrintScreen": 550531.2284091873,
+    "ReleaseFilm": 23087,
+    "TempOfUVLED": 33.280921936035156,
+    "TimeLapseStatus": 1,
+    "HeatStatus": 1,
+    "TempOfTank": 29,
+    "TempTargetTank": 30,
+    "PrintInfo": {
+      "Status": 4,
+      "CurrentLayer": 3039,
+      "TotalLayer": 7901,
+      "CurrentTicks": 31860764,
+      "TotalTicks": 93224007,
+      "ErrorNumber": 0,
+      "Filename": "lock_holder.STL_0.020_4.000_2026_10_29_10_55.ctb",
+      "TaskId": "1e129be0-1dd2-11b2-a533-d18a25d8094d"
+    }
+  },
+  "expect": {
+    "model": "elegoo-saturn-4-ultra",
+    "profile": "saturn-4-ultra",
+    "kind": "resin",
+    "print_status": "lifting",
+    "remaining_min": 1022.6,
+    "sensors": [
+      "vat_temp",
+      "uv_led_temp",
+      "release_film",
+      "lcd_usage",
+      "progress"
+    ],
+    "absent": [
+      "nozzle_temp",
+      "bed_temp"
+    ],
+    "camera": true
+  }
+}

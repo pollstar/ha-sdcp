@@ -1,0 +1,84 @@
+{
+  "_source": "SYNTHETIC — field layout of the Centauri Carbon SDCP v3 status as reported by the community; replace with a live capture (scripts/capture_fixture.py).",
+  "attributes": {
+    "Name": "Centauri Carbon",
+    "MachineName": "Centauri Carbon",
+    "BrandName": "ELEGOO",
+    "ProtocolVersion": "V3.0.0",
+    "FirmwareVersion": "V1.1.25",
+    "Resolution": "",
+    "XYZsize": "256x256x256",
+    "MainboardIP": "127.0.0.1",
+    "MainboardID": "cc0000000000000001",
+    "NumberOfVideoStreamConnected": 0,
+    "MaximumVideoStreamAllowed": 1,
+    "Capabilities": [
+      "FILE_TRANSFER",
+      "PRINT_CONTROL",
+      "VIDEO_STREAM"
+    ],
+    "SupportFileType": [
+      "GCODE"
+    ],
+    "DevicesStatus": {
+      "ZMotorStatus": 1,
+      "YMotorStatus": 1,
+      "XMotorStatus": 1
+    },
+    "CameraStatus": 1,
+    "RemainingMemory": 5000000000
+  },
+  "status": {
+    "CurrentStatus": [
+      1
+    ],
+    "TimeLapseStatus": 0,
+    "PlatFormType": 0,
+    "TempOfHotbed": 59.8,
+    "TempOfNozzle": 214.6,
+    "TempOfBox": 31.2,
+    "TempTargetHotbed": 60,
+    "TempTargetNozzle": 220,
+    "TempTargetBox": 0,
+    "CurrenCoord": "120.00,98.50,24.60",
+    "CurrentFanSpeed": {
+      "ModelFan": 100,
+      "AuxiliaryFan": 0,
+      "BoxFan": 30
+    },
+    "ZOffset": 0.0,
+    "PrintSpeed": 100,
+    "PrintInfo": {
+      "Status": 13,
+      "CurrentLayer": 120,
+      "TotalLayer": 240,
+      "CurrentTicks": 1800,
+      "TotalTicks": 3600,
+      "ErrorNumber": 0,
+      "Filename": "benchy_PLA_0.2mm.gcode",
+      "TaskId": "cc-task-1",
+      "PrintSpeedPct": 100
+    }
+  },
+  "expect": {
+    "model": "elegoo-centauri-carbon",
+    "profile": "generic-fdm",
+    "kind": "fdm",
+    "print_status": "printing",
+    "remaining_min": 30.0,
+    "sensors": [
+      "nozzle_temp",
+      "bed_temp",
+      "chamber_temp",
+      "model_fan",
+      "box_fan",
+      "z_offset",
+      "toolhead_position"
+    ],
+    "absent": [
+      "vat_temp",
+      "release_film"
+    ],
+    "camera": true
+  }
+}
